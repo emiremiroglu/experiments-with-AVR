@@ -1,0 +1,6 @@
+#define output(pin) (DDRB |= (1 << pin))
+#define input(pin)  (DDRB |= (0 << pin))
+#define on(pin)     (PORTB |= (1 << pin))
+#define off(pin)    (PORTB &= ~(1 << pin))
+#define flip(pin)   (PORTB ^= (1 << pin))
+#define check(pin)  (PINB & (1 << pin))

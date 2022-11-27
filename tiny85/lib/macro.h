@@ -1,0 +1,7 @@
+#define out(pin)    DDRB |= (1 << pin)
+#define in(pin)     DDRB |= (0 << pin)
+#define on(pin)     PORTB |= (1 << pin)
+#define off(pin)    PORTB &= ~(1 << pin)
+#define flip(pin)   PORTB ^= (1 << pin)
+#define pullup(pin)	PORTB |= (1 << pin)
+#define get(pin)    (PINB & (1 << pin))

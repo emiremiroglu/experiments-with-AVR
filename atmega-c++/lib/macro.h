@@ -1,0 +1,6 @@
+#define input(port, pin) DDR ## port &= ~(1<<pin)
+#define output(port, pin) DDR ## port |= (1<<pin)
+#define on(port, pin) PORT ## port |= (1<<pin)
+#define off(port, pin) PORT ## port &= ~(1<<pin)
+#define toggle(port, pin) PORT ## port ^= (1<<pin)
+#define read(port, pin) (PIN ## port & (1<<pin))
